@@ -1,0 +1,86 @@
+@font-face {
+    font-family: helvetica;
+    src: url(Helvetica.ttf);
+}
+*{
+    font-family: helvetica;
+}
+body {
+    margin: 0;
+    background-color: #333333;
+}
+.absolutepos {
+    position: absolute;
+    top:0;
+    width:100%;
+}
+.banner {
+    margin: 0;
+    display: flex;
+    justify-content: right;
+    gap: 20px;
+    margin-right: 2%;
+    background-color: transparent;
+    font-size: 1.8vw;
+}
+a {
+    color: white;
+    text-decoration: none;
+    padding: 1%;    
+}
+.link::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #FFF;
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.3s ease;
+  }
+.link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+.top {
+    display: flex;
+    align-content: center;
+    height: 50vh;
+}
+#intro {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+}
+#intro h1, h3 {
+    padding-left: 20%;
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
+#intro h1 {
+    font-size: 3.4vw;
+}
+#intro h3 {
+    font-size: 2vw;
+}
+#intro button {
+    background-color: #333333;
+    border-radius: 10px;
+    color: white;
+    margin-left: 20%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-style: none;
+    width: 20%;
+    z-index: 20;
+}
+#portrait {
+    width: 200px;
+    height: 200px;
+    align-self: center;
+    transform: translateX(-100px);
+}
